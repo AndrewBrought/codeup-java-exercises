@@ -9,7 +9,7 @@ public class HelloWorld{
             int myFavoriteNumber = 42;
             System.out.println(myFavoriteNumber);
 //        Create a String variable named myString and assign a string value to it, then print the variable out to the console.
-            String myString = "Good morning Neverland";
+            String myString = "Good morning, Neverland";
             System.out.println(myString);
 //        Change your code to assign a character value to myString. What do you notice?
 //         char newVal = myString;
@@ -33,18 +33,15 @@ public class HelloWorld{
 //        Change your code to assign the value 123 to myNumber.
         myNumber = 123;
 //        Why does assigning the value 3.14 to a variable declared as a long not compile, but assigning an integer value does?
-//        This is because the type of long is a wide scoped integer type...3.14 is a double-precision, floating-point numbers type
+//        This is because the type of long is a wide scoped integer type...3.14 is a double-precision (higher precision type), floating-point numbers type
 //                Change your code to declare myNumber as a float. Assign the value 3.14 to it. What happens? What are two ways we could fix this?
 //            float = myNumber;
 //            This is not a statement
-//        float smallPi = 3.14;
-//        long myNumber = smallPi;
+//        Way 1:
+//        float myNumber = (float) 3.14;
+//        Way 2:
+//        float myNumber = 3.14f;
 
-        double smallPi = 3.14;
-        float newPi = (float) smallPi;
-        System.out.println(newPi);
-
-        myNumber = (long) newPi;
         System.out.println(myNumber);
 
 //        int x = 5;
@@ -55,6 +52,7 @@ public class HelloWorld{
         System.out.println(++x);
         System.out.println(x);
 
+//        String class;  This wont work because it's a reserved word in java
 //        class first{
 //            public static void main(String[] args) {
 ////                Inner cannot have static declarations
@@ -86,6 +84,18 @@ System.out.println(y += 5);
         System.out.println(t /= u);
 //        y = y - x;
         System.out.println(u -= t);
+
+//        incfementation takes into consideration with the data type ....when you're adding values together, all that matters is the value
+
+        short otherNumber = 32767;
+//        System.out.println(++otherNumber);
+//        will return the beginning of the scope ... -32768
+//        if we treat it simply as it's number value
+        System.out.println(otherNumber + 100);
+//        will return 32867
+
+        System.out.println(Double.MAX_VALUE);
+        System.out.println(Integer.MAX_VALUE);
 
 
     }
