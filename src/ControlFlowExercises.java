@@ -74,25 +74,67 @@ public class ControlFlowExercises {
         Scanner sc = new Scanner(System.in);
 
 //      Table of Powers
-//        System.out.println("What number would you like to enter?");
-//        int userInput = sc.nextInt();
-//
-//        System.out.println("number | squared | cubed |");
+        System.out.println("What number would you like to enter?");
+        int userInput = sc.nextInt();
+
+        System.out.println("number | squared | cubed |");
+        sc.nextLine();
+        System.out.println("------ | ------- | ----- |");
 //        sc.nextLine();
-//        System.out.println("------ | ------- | ----- |");
-////        sc.nextLine();
-//
+
 //        for (int i = 1; i <= userInput; i++){
-//            System.out.print(i + "    "); if(i > 9) {System.out.print("   " + i * i);}else{System.out.print("    " + i * i);}System.out.print("         " + i * i * i);
+//            System.out.print(i + "    ");
+//            if(i > 9) {System.out.print("   " + i * i);
+//            }else{
+//                System.out.print("    " + i * i);
+//            }
+//            System.out.print("         " + i * i * i);
 //
 //        sc.nextLine();
 //        }
 
+        for (int i = 1; i <= userInput; i++){
+            System.out.print(i + "    ");
+            System.out.print("   " + i * i);
+            System.out.println("         " + i * i * i);
+
+//            sc.nextLine();
+        }
+
+//        System.out.println("Please enter a numerical grade: 0 - 100 ");
+//        int userInput = sc.nextInt();
+//        System.out.println(userInput);
+//        int grade = userInput;
+//        String response = "";
+
+//                do {
+//                    System.out.println("Please enter a numerical grade: 0 - 100 ");
+//                    int userInput = sc.nextInt();
+//                    System.out.println(userInput);
+//                    int grade = userInput;
+//                    if (grade <= 59) {
+//                        System.out.println("Your grade is an F: " + grade);
+//                    } else if (grade <= 66) {
+//                        System.out.println("Your grade is a D: " + grade);
+//                    } else if (grade <= 79) {
+//                        System.out.println("Your grade is a C: " + grade);
+//                    } else if (grade <= 87) {
+//                        System.out.println("Your grade is a B: " + grade);
+//                    } else if (grade <= 100) {
+//                        System.out.println("Your grade is an A: " + grade);
+//                    }
+//                 System.out.println("Would you like to continue? Enter yes or no: ");
+//                     String yesNo = sc.next();
+//                     response = yesNo;
+//                } while (response.equals("yes"));
 
 
 
 
 
+
+
+//
 
 
     }
