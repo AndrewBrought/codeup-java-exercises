@@ -23,7 +23,7 @@ public class phraseOMatic {
         int rand2 = (int) (Math.random() * twoLength);
         int rand3 = (int) (Math.random() * threeLength);
 
-//        npw build a phrase
+//        now build a phrase
         String phrase = wordListOne[rand1] + " " + wordListTwo[rand2] + " " + wordListThree[rand3];
         System.out.println("What we need is a " + phrase);
 
