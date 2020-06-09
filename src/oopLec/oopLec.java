@@ -1,5 +1,6 @@
 package oopLec;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class oopLec {
@@ -62,6 +63,33 @@ public class oopLec {
        d1.callForDog("Sparky"); //Tater ignores you.
 
 
+
+       System.out.println(Arithmetic.PI);
+       System.out.println(Arithmetic.add(5,5));
+       System.out.println(Arithmetic.multiply(5,5));
+
+        Person person = new Person();
+        person.name = "John Smith";
+        person.age = 32;
+
+        Post post = new Post();
+        post.setTitle("A Day in the Life");
+       System.out.println(post.getTitle()); //use the getTitle to grab the setTitle value
+//        post.category = "Funny";
+//        post.title = "A Day in the Life";
+//        post.content = "I am what I am.";
+//        post.createdAt = new Date();
+//        post.editedAt = new Date();
+//        post.author = person; //This holds all the info related to this person (name, id, status, etc...)
+
+
+//       Student s = new Student(); //new object
+//       s.name = "J. Reich";
+//       s.cohort = "Lassen";
+
+       Student s = new Student("A. Brought", "Ganymede");
+       System.out.println(s.name);
+       System.out.println(s.cohort);
 
    }
 
