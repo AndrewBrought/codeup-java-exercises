@@ -3,20 +3,21 @@ import util.Input;
 
 public class CircleApp {
 
-    private static Object Circle;
 
     public static void main(String[] args) {
+        //        This is what triggers the program AND this is where we tell them it's ended
+//        "separation of concerns"
 
-            Input in = new Input();  //am I creating new input?
-
+        Input in = new Input();  //am I creating new input?
         boolean loop;
+
         do{
         System.out.println("Please submit a radius between 1 - 20: ");
-        double radius = in.getDouble(1.0, 20.0);
+        double radius = in.getDouble();
         Circle cir = new Circle(radius);
         System.out.println("Your radius is " + radius);
-        System.out.printf("The circumference of your circle is: %.2f\n", cir.getCircumference(radius));
-        System.out.printf("The area of your circle is: %.2f\n", cir.getArea(radius));
+        System.out.printf("The circumference of your circle is: %.2f\n", cir.getCircumference());
+        System.out.printf("The area of your circle is: %.2f\n", cir.getArea());
 
             System.out.println("Would you like to continue? Enter y or n: ");
             loop = in.yesNo();
@@ -26,7 +27,7 @@ public class CircleApp {
 //            Input in = new Input();
 
         }while(loop == true);
-        System.out.println("You created " + shapes.Circle.getCircleCounter() + " circles!");
+        System.out.println("You created " + Circle.getCircleCounter() + " circles!");
     }
 }
 

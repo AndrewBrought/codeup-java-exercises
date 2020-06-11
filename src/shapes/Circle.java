@@ -6,19 +6,20 @@ public class Circle {
     private static int circleCounter;
 
     public Circle(double radius) {
-
+        this.radius = radius;
         getCircleCounter();
 //        System.out.println("You created " + circleCounter + " circle(s)");
     }
 
 
+//These are instances methods, determined by the defined radius
 
-    public double getArea(double radius) {
-        return Math.PI * (radius * radius);
+    public double getArea() {
+        return Math.PI * (Math.pow(radius, 2));
     }
 
 
-    public double getCircumference(double radius) {
+    public double getCircumference() {
         return 2 * Math.PI * radius;
     }
 
