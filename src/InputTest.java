@@ -3,6 +3,7 @@ import util.Input;
 public class InputTest {
     public static void main(String[] args){
 
+
         System.out.println("Welcome!");
         Input in = new Input();
         System.out.println("What's your favorite color?");
@@ -17,6 +18,9 @@ public class InputTest {
         System.out.println("Please enter a decimal between 1.0 and 10.0: ");
         double decimal = in.getDouble(1.0, 10.0);
         System.out.println("The decimal you entered is: " + decimal);
+
+
+
 
     }
 
