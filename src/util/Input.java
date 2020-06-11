@@ -41,6 +41,11 @@ public class Input {
         return userInput;
     }
 
+//    public int getInt(){
+//        int userInput = sc.nextInt();
+//        return userInput;
+//    }
+
     public double getDouble(double min, double max){
         boolean state = false;
         double userInput;
@@ -55,6 +60,11 @@ public class Input {
             System.out.println("Thanks for a valid decimal!");
             return userInput;
     }
+
+//    public double getDouble(){
+//        double userInput = sc.nextDouble();
+//        return userInput;
+//    }
 
 //        This is what triggers the program AND this is where we tell them it's ended
 //        "separation of concerns"

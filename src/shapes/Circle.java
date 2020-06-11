@@ -8,7 +8,7 @@ public class Circle {
     public Circle(double radius) {
 
         getCircleCounter();
-        System.out.println("You created " + circleCounter + " circle(s)");
+//        System.out.println("You created " + circleCounter + " circle(s)");
     }
 
 

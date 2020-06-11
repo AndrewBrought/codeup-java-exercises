@@ -26,7 +26,7 @@ public class CircleApp {
 //            Input in = new Input();
 
         }while(loop == true);
-        System.out.println("You created " + shapes.Circle.getCircleCounter() + "circles!");
+        System.out.println("You created " + shapes.Circle.getCircleCounter() + " circles!");
     }
 }
 
