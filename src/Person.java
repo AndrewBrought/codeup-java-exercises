@@ -3,11 +3,7 @@ import java.util.Arrays;
 public class Person { // This allows us to encapsulate our data so that one place is responsible for all related code
     private String name; // restricted visible property/object
 
-    public static String[] peopleCopy(String[] array, String person){
-        String[] newCopy = Arrays.copyOf(array, array.length + 1);
-        newCopy[newCopy.length - 1] = person;
-        return newCopy;
-    }
+
 
     public Person(String name){
         this.name = name; // here we're just assigning the property directly

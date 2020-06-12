@@ -49,24 +49,27 @@ public class MoviesApplication {
      }
     }
 
+//  Add Movie:
+public static Movie[] addMovie(Movie[] movies, Movie movie){
+    Movie[] newMovie = Arrays.copyOf(movies, movies.length + 1);
+    newMovie[movies.length - 1] = movie;
+    return newMovie;
+}
 
     public static void main(String[] args) {
         Input in = new Input();
         boolean loop;
 
         do {
-//            System.out.println("Would you like to look up a movie?");
-//            loop = in.yesNo();
-
             System.out.printf("0 - exit\n" +
                     "1 - view all movies\n" +
                     "2 - view movies in the animated category\n" +
                     "3 - view movies in the drama category\n" +
                     "4 - view movies in the horror category\n" +
                     "5 - view movies in the scifi category\n");
+
             int input = in.getInt();
             if(input == 0){
-
                 System.out.println("Thank you for using this app!");
                 break;
             }
@@ -89,5 +92,8 @@ public class MoviesApplication {
             loop = in.yesNo();
         }while(loop);
         System.out.println("Thank you for using this app!");
+
+//        String newMovie = in.getString();
+//        System.out.println(Arrays.toString(Movie.movieCopy(movies, newMovie)));
     }
 }
