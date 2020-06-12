@@ -11,12 +11,12 @@ public class oopLec {
 //       Scanner sc = new Scanner(System.in);
 
 
-       Person rick1 = new Person(); // new data type
-       rick1.firstName = "Rick";
-       rick1.lastName = "Sanchez";
-//       rick.age = 23;
-       System.out.println(rick1.firstName);
-       System.out.println(rick1.lastName);
+//       Person rick1 = new Person(); // new data type
+//       rick1.firstName = "Rick";
+//       rick1.lastName = "Sanchez";
+////       rick.age = 23;
+//       System.out.println(rick1.firstName);
+//       System.out.println(rick1.lastName);
 //       System.out.println(rick.age);
 
 
@@ -41,12 +41,12 @@ public class oopLec {
 //        User user = new User(); // to create this we could create a user class.
 
 
-       Person fred = new Person();
-       fred.firstName = "Fred";
-       fred.lastName = "Smith";
-//       System.out.println(fred.firstName);
-//       System.out.println(fred.lastName);
-       System.out.println(fred.sayHello());  //invoking a method
+//       Person fred = new Person();
+//       fred.firstName = "Fred";
+//       fred.lastName = "Smith";
+////       System.out.println(fred.firstName);
+////       System.out.println(fred.lastName);
+//       System.out.println(fred.sayHello());  //invoking a method
 
 
 
@@ -68,9 +68,9 @@ public class oopLec {
        System.out.println(Arithmetic.add(5,5));
        System.out.println(Arithmetic.multiply(5,5));
 
-        Person person = new Person();
-        person.name = "John Smith";
-        person.age = 32;
+//        Person person = new Person();
+//        person.name = "John Smith";
+//        person.age = 32;
 
         Post post = new Post();
         post.setTitle("A Day in the Life");
