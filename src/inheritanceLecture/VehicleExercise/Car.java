@@ -27,6 +27,10 @@ public class Car extends Vehicle {
         System.out.println("Cranking engine...");
     }
 
+    public void genericTurnOn(){
+        super.turnOn();
+    }
+
             public String carToString() {
             return "Car: \n" + super.vehicleToString() + " " + "\nMilesPerGallon: " + milesPerGallon + "\n========================";
         }

@@ -27,6 +27,10 @@ public class Jet extends Vehicle {
         System.out.println("Igniting jet engines...");
     }
 
+    public void genericTurnOn(){
+        super.turnOn();
+    }
+
     public String jetToString() {
         return "Jet: \n" + super.vehicleToString() + " " + "\nMaximum Altitude: " + maximumAltitude + "\n========================";
     }

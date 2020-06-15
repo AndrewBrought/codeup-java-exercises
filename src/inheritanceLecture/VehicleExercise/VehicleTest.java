@@ -49,5 +49,8 @@ public class VehicleTest {
         vehicles[1] = j2;
 
         turnOnVehicles(vehicles);
+
+        c2.genericTurnOn();
+        j2.genericTurnOn();
     }
 }
