@@ -8,7 +8,8 @@ public class ShapesTest {
         System.out.println(box1.getArea());
 
         Rectangle box2 = new Square(5);
-        System.out.printf("%.2f\n", box2.getPerimeter());
-        System.out.printf("%.2f", box2.getArea());
+        System.out.println(box2.getPerimeter());
+        System.out.println(box2.getArea());
+
     }
 }
