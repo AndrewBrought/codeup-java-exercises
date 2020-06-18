@@ -73,7 +73,10 @@ public class GradesApplication {
 
 
 
+
+
         Input in = new Input();
+        Input response = new Input();
         boolean loop;
 
         do {
@@ -82,11 +85,13 @@ public class GradesApplication {
 
           System.out.println(keyset);
 
-            System.out.printf("1 - view all student grades\n" +
-                              "2 - look up specific student\n");
+            System.out.print("1 - view all student grades\n" +
+                            "2 - look up specific student\n" +
+                            "3 - print csv report");
 
-            int key = in.getInt();
-            if(key == 1){
+            int keyR = response.getInt();
+
+            if(keyR == 1){
                 System.out.println("Student Grades:");
                 System.out.println("Mary Catherine: " + marysGrades);
                 System.out.println("Mary's Average: " + MaryCatherine.getGradeAverage());
@@ -98,18 +103,27 @@ public class GradesApplication {
                 System.out.println("Devon's Average: " + DevonSlade.getGradeAverage());
                 System.out.println("John Wick: " + johnsGrades);
                 System.out.println("John's Average: " + JohnWick.getGradeAverage());
-                System.out.println("\n");
-            } else if(key == 2) {
+//                System.out.println("\n");
+            } else if(keyR == 2) {
 
                 System.out.println("What student would you like to see more information on?");
-
                 String input = in.getString();
+
 
                 if (students.containsKey(input)) {
                     Student student = students.get(input);
                     System.out.println("Name: " + student.getName() + " - GitHub username: " + input + "\nCurrent Average: " + student.getGrades() + "\n" + student.getGradeAverage());
                 } else {
                     System.out.println("Sorry, no student found with the GitHub username of: \"" + input + "\"");
+                }
+            } else if(keyR == 3){
+                System.out.println("Name, github_username, average");
+                for (Map.Entry mapElement : students.entrySet()) {
+
+                    String key = (String) mapElement.getKey();
+                    Student value = ((Student)mapElement.getValue());
+                    Student student = value;
+                    System.out.println(key + ", " + value.getName() + ", " + student.getGradeAverage());
                 }
             }
 
