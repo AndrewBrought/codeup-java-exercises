@@ -2,8 +2,8 @@ package grades;
 
 import util.Input;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
+
 
 public class GradesApplication {
 
@@ -60,36 +60,64 @@ public class GradesApplication {
 
         Student JohnWick = new Student("John Wick", johnsGrades);
         System.out.println(JohnWick.getGradeAverage());
+//        System.out.println(JohnWick.getGrades());
 
-        HashMap<Student, String> students = new HashMap<>();
-        students.put(MaryCatherine, "mCatheter");
-        students.put(JeffLebowski, "dudeAbides62");
-        students.put(IssacNewton, "noRelation42");
-        students.put(DevonSlade, "dSlade82");
-        students.put(JohnWick, "thatJohnW");
+        HashMap<String, Student> students = new HashMap<>();
+        students.put("mCatheter", MaryCatherine);
+        students.put("dudeAbides62", JeffLebowski);
+        students.put("noRelation42", IssacNewton);
+        students.put("dSlade82", DevonSlade);
+        students.put("thatJohnW", JohnWick);
+//        JohnWick.getName();
+        Set keyset = students.keySet();
 
 
 
         Input in = new Input();
         boolean loop;
-        do {
-          String input = in.getString();
 
+        do {
           System.out.println("Welcome!");
           System.out.println("Here are the GitHub usernames of our students: ");
 
-          System.out.println("|" + students.get(MaryCatherine) + "|  " + "|" + students.get(JeffLebowski) + "|  " + "|" + students.get(IssacNewton) + "|  " + "|" + students.get(DevonSlade) + "|  " + "|" + students.get(JohnWick) + "|");
+          System.out.println(keyset);
 
-          System.out.println("What student would you like to see more information on?");
+            System.out.printf("1 - view all student grades\n" +
+                              "2 - look up specific student\n");
 
-          if(students.containsValue(input)){
-              System.out.println("Name: " + students.get(input) + " - GitHub username: " + input + "\nCurrent Average: " + students.containsKey(input));
+            int key = in.getInt();
+            if(key == 1){
+                System.out.println("Student Grades:");
+                System.out.println("Mary Catherine: " + marysGrades);
+                System.out.println("Mary's Average: " + MaryCatherine.getGradeAverage());
+                System.out.println("Jeff Lebowski: " + jeffsGrades);
+                System.out.println("Jeff's Average: " + JeffLebowski.getGradeAverage());
+                System.out.println("Issac Newton: " + issacsGrades);
+                System.out.println("Issac's Average: " + IssacNewton.getGradeAverage());
+                System.out.println("Devon Slade: " + devonsGrades);
+                System.out.println("Devon's Average: " + DevonSlade.getGradeAverage());
+                System.out.println("John Wick: " + johnsGrades);
+                System.out.println("John's Average: " + JohnWick.getGradeAverage());
+                System.out.println("\n");
+            } else if(key == 2) {
 
-          }
+                System.out.println("What student would you like to see more information on?");
 
-          loop = in.yesNo();
+                String input = in.getString();
+
+                if (students.containsKey(input)) {
+                    Student student = students.get(input);
+                    System.out.println("Name: " + student.getName() + " - GitHub username: " + input + "\nCurrent Average: " + student.getGrades() + "\n" + student.getGradeAverage());
+                } else {
+                    System.out.println("Sorry, no student found with the GitHub username of: \"" + input + "\"");
+                }
+            }
+
+            System.out.println("Would you like to continue?");
+
+            loop = in.yesNo();
 
       }while (loop);
-
+        System.out.println("Goodbye, have a wonderful day!");
     }
 }

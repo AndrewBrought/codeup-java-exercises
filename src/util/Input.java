@@ -22,7 +22,7 @@ public class Input {
     }
 
     public boolean yesNo() {
-        String userInput = sc.next();
+        String userInput = sc.nextLine();
 //        String userInput = getString();
         if (userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y")) {
             return true;

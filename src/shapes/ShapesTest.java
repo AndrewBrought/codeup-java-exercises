@@ -33,8 +33,8 @@ public class ShapesTest {
 //
 
 //        This is how we are setting specific properties on an object
-//        Rectangle myRectangle = new Rectangle(4,5);
-//        System.out.println(myRectangle.getColor());
+        Rectangle myRectangle = new Rectangle(4,5);
+        System.out.println(myRectangle.getColor());
 //      Then we are able to instantiate a new type with different tools on the same shape...
 //        Quadrilateral myShape3 = myRectangle;
 //        myShape3.getPerimeter();
