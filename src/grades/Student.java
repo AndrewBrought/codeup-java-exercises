@@ -1,6 +1,8 @@
 package grades;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Student {
 
@@ -56,6 +58,14 @@ public class Student {
 //        return sum;
 //    }
 
+    public String getKeyAndValue(HashMap<String, Student> students){
+        for (Map.Entry mapElement : students.entrySet()) {
+            String key = (String) mapElement.getKey();
+            Student value = ((Student) mapElement.getValue());
+            System.out.println(key + ", " + value.getName() + ", " + value.getGradeAverage());
+        }
+        return getKeyAndValue(students);
+    }
 
     public static void main(String[] args) {
 
@@ -67,6 +77,8 @@ public class Student {
 
         Student dude = new Student("Dude", grade1);
         System.out.println(dude.getGradeAverage());
+
+
 
 
     }

@@ -10,7 +10,6 @@ public class GradesApplication {
     public static void main(String[] args) {
 
 
-
         ArrayList<Integer> marysGrades = new ArrayList<>();
         marysGrades.add(88);
         marysGrades.add(96);
@@ -71,27 +70,34 @@ public class GradesApplication {
 //        JohnWick.getName();
         Set keyset = students.keySet();
 
-
-
-
+//        Refactor this as a method that can be used over and over
+//        for (Map.Entry mapElement : students.entrySet()) {
+//            String key = (String) mapElement.getKey();
+//            Student value = ((Student) mapElement.getValue());
+//        }
 
         Input in = new Input();
         Input response = new Input();
         boolean loop;
 
-        do {
-          System.out.println("Welcome!");
-          System.out.println("Here are the GitHub usernames of our students: ");
 
-          System.out.println(keyset);
+        do {
+            System.out.println("Welcome!");
+            System.out.println("Here are the GitHub usernames of our students: ");
+
+//          Second way of displaying user keys
+            System.out.println(keyset);
+
+//                System.out.println("|" + key + "|  ");
+
 
             System.out.print("1 - view all student grades\n" +
-                            "2 - look up specific student\n" +
-                            "3 - print csv report");
+                    "2 - look up specific student\n" +
+                    "3 - print csv report\n");
 
             int keyR = response.getInt();
 
-            if(keyR == 1){
+            if (keyR == 1) {
                 System.out.println("Student Grades:");
                 System.out.println("Mary Catherine: " + marysGrades);
                 System.out.println("Mary's Average: " + MaryCatherine.getGradeAverage());
@@ -104,34 +110,41 @@ public class GradesApplication {
                 System.out.println("John Wick: " + johnsGrades);
                 System.out.println("John's Average: " + JohnWick.getGradeAverage());
 //                System.out.println("\n");
-            } else if(keyR == 2) {
+            } else if (keyR == 2) {
 
                 System.out.println("What student would you like to see more information on?");
                 String input = in.getString();
 
-
                 if (students.containsKey(input)) {
                     Student student = students.get(input);
-                    System.out.println("Name: " + student.getName() + " - GitHub username: " + input + "\nCurrent Average: " + student.getGrades() + "\n" + student.getGradeAverage());
+                    System.out.println("Name: " + student.getName() + " - GitHub username: " + input + "\nGrades: " + student.getGrades() + "\nCurrent Average: " + student.getGradeAverage());
+
                 } else {
                     System.out.println("Sorry, no student found with the GitHub username of: \"" + input + "\"");
                 }
-            } else if(keyR == 3){
+
+            } else if (keyR == 3) {
                 System.out.println("Name, github_username, average");
-                for (Map.Entry mapElement : students.entrySet()) {
+//                for (Map.Entry mapElement : students.entrySet()) {
+//                    String key = (String) mapElement.getKey();
+//                    Student value = ((Student) mapElement.getValue());
+//                    Student student = value;
+//                }
 
-                    String key = (String) mapElement.getKey();
-                    Student value = ((Student)mapElement.getValue());
-                    Student student = value;
-                    System.out.println(key + ", " + value.getName() + ", " + student.getGradeAverage());
-                }
+                //Check this
+                getKeyAndValue(students);
+
+
+
             }
+                System.out.println("Would you like to continue?");
+                loop = in.yesNo();
 
-            System.out.println("Would you like to continue?");
-
-            loop = in.yesNo();
-
-      }while (loop);
+        }while (loop);
         System.out.println("Goodbye, have a wonderful day!");
+
+        }
+
+    private static void getKeyAndValue(HashMap<String, Student> students) {
     }
 }

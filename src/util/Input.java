@@ -26,9 +26,12 @@ public class Input {
 //        String userInput = getString();
         if (userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y")) {
             return true;
-        } else{
+        } else if (userInput.equalsIgnoreCase("no") || userInput.equalsIgnoreCase("n")) {
             return false;
+        }else{
+            System.out.println("I am sorry, that's not a valid entry...");
         }
+        return yesNo();
     }
 
 
