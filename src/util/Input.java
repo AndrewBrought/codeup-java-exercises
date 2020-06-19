@@ -110,13 +110,23 @@ public class Input {
     }
 
 
-    public String getBinary(){
+//    public String getBinary(){
+//        try{
+//            return Integer.toBinaryString(getInt());
+//        } catch(NumberFormatException e){
+//            System.out.println("Invalid input.  Enter valid integer...");
+//            e.printStackTrace();
+//            return getBinary();
+//        }
+//    }
+
+    public static int getBinary(int bin){
         try{
-            return Integer.toBinaryString(getInt());
-        } catch(NumberFormatException e){
+            return Integer.parseInt(String.valueOf(bin), 2);
+        }catch(NumberFormatException e){
             System.out.println("Invalid input.  Enter valid integer...");
             e.printStackTrace();
-            return getBinary();
+            return getBinary(bin);
         }
     }
 
@@ -134,13 +144,13 @@ public class Input {
 
         Input in = new Input();
 
-        System.out.println("Enter an integer: ");
-        String hex = in.getHex();
-        System.out.println("Hex value is " + hex);
+
+//        System.out.println("Enter an integer: ");
+//        String hex = in.getHex();
+//        System.out.println("Hex value is " + hex);
 
         System.out.println("Enter another integer: ");
-        String bin = in.getBinary();
-        System.out.println("Binary value is " + bin.length()); //I am confused why the text return is 7 - are we setting the method to return length?
+        System.out.println(getBinary(in.getInt()));
 
     }
 
