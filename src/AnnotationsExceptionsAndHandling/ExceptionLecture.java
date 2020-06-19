@@ -1,5 +1,7 @@
 package AnnotationsExceptionsAndHandling;
 
+import java.sql.SQLException;
+
 public class ExceptionLecture {
 
     /*
@@ -80,9 +82,39 @@ public class ExceptionLecture {
 //            }
 
 
+//            throw new Exception("Uh oh"); //this by itself will not run because it's throwing a checked exception and we must handle it in some way (ie. try-catch block
+
+//            This will run:
+//            try{
+//                throw new Exception("Uh Oh");
+//            }catch(Exception e){
+//                e.printStackTrace();
+//            }
+
+//            This will hault the program
+//            try {
+//                throw new SQLException("Something went wrong"); //checked exception
+//            } catch(SQLException e){
+//                throw new RuntimeException("Error occurred when adding a record"); //will completely stop the program
+//            } finally {
+//                System.out.println("the finally always runs!");
+//        }
+
+//            finally block is normally where you would close off the connection to a data base or outside resources
+//             See this: https://stackoverflow.com/questions/3861522/do-you-really-need-the-finally-block
+
+//      Throws - - throws the problem further down the road to be handled...sometimes you're at a too specific level to handle a problem
+//            Rule of thumb, use try-catch as soon as you can
+
+//            try {
+//                throw new NameIsBobException("The name is Bob: ");
+//            } catch (NameIsBobException e) {
+//                e.printStackTrace();
+//            }
 
 
-
+//              checked exception - Any exception, not descended from runtime exception...must handle the exception such as with a try catch block
+//              runtime exception - is any exception descended from Runtime exception...does not have to be handled
 
 
 //        try {
@@ -203,6 +235,15 @@ public class ExceptionLecture {
 //                System.out.println(e.getMessage());
 //            }
 
+
+            try {
+//                soutName("Justin");
+                soutName("Bob");
+            } catch (NameIsBobException e) {
+                e.printStackTrace();
+            }
+
+
         }
 
 //        public static void thisHandlesAnException() {
@@ -218,13 +259,15 @@ public class ExceptionLecture {
 //            throw new Exception("Exception!");
 //        }
 //
-//        public static void soutName(String name) throws NameIsBobException {
-//            if (name.equalsIgnoreCase("bob")) {
-//                throw new NameIsBobException("NOOOOOOO!!!!");
-//            } else {
-//                System.out.println(name);
-//            }
-//        }
+    //Can throw multiple exception in throws
+//    See line 237
+        public static void soutName(String name) throws NameIsBobException {
+            if (name.equalsIgnoreCase("bob")) {
+                throw new NameIsBobException("NOOOOOOO!!!!");
+            } else {
+                System.out.println(name);
+            }
+        }
 
     }
 
