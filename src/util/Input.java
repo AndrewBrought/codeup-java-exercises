@@ -110,23 +110,23 @@ public class Input {
     }
 
 
-//    public String getBinary(){
-//        try{
-//            return Integer.toBinaryString(getInt());
-//        } catch(NumberFormatException e){
-//            System.out.println("Invalid input.  Enter valid integer...");
-//            e.printStackTrace();
-//            return getBinary();
-//        }
-//    }
+    public String getBinary(){
+        try{
+            return Integer.toBinaryString(getInt());
+        } catch(NumberFormatException e){
+            System.out.println("Invalid input.  Enter valid integer...");
+            e.printStackTrace();
+            return getBinary();
+        }
+    }
 
-    public static int getBinary(int bin){
+    public static int convertBinary(int bin){
         try{
             return Integer.parseInt(String.valueOf(bin), 2);
         }catch(NumberFormatException e){
             System.out.println("Invalid input.  Enter valid integer...");
             e.printStackTrace();
-            return getBinary(bin);
+            return convertBinary(bin);
         }
     }
 
@@ -140,17 +140,31 @@ public class Input {
         }
     }
 
+    public static int convertHex(int hex){
+        try{
+            return Integer.parseInt(String.valueOf(hex), 2);
+        }catch(NumberFormatException e){
+            System.out.println("Invalid input.  Enter valid integer...");
+            e.printStackTrace();
+            return convertHex(hex);
+        }
+    }
+
     public static void main(String[] args) {
 
         Input in = new Input();
 
 
-//        System.out.println("Enter an integer: ");
-//        String hex = in.getHex();
-//        System.out.println("Hex value is " + hex);
+        System.out.println("Enter an integer: ");
+        String hex = in.getHex();
+        System.out.println("Hex value is " + hex);
 
-        System.out.println("Enter another integer: ");
-        System.out.println(getBinary(in.getInt()));
+//        System.out.println("Enter an integer: ");
+//        System.out.println(getBinary(in.getInt()));
+
+        System.out.println("Enter an integer: ");
+        String bin = in.getBinary();
+        System.out.println(bin);
 
     }
 
