@@ -152,19 +152,23 @@ public class Input {
 
     public static void main(String[] args) {
 
-        Input in = new Input();
-
-
-        System.out.println("Enter an integer: ");
-        String hex = in.getHex();
-        System.out.println("Hex value is " + hex);
-
+//        Input in = new Input();
+//
+//
 //        System.out.println("Enter an integer: ");
-//        System.out.println(getBinary(in.getInt()));
+//       String hex = in.getHex();
+//        System.out.println("Hex value is " + hex);
+//
+//
+//
+////        System.out.println("Enter an integer: ");
+////        System.out.println(getBinary(in.getInt()));
+//
+//        System.out.println("Enter an integer: ");
+//        String bin = in.getBinary();
+//        System.out.println(bin);
 
-        System.out.println("Enter an integer: ");
-        String bin = in.getBinary();
-        System.out.println(bin);
+
 
     }
 
