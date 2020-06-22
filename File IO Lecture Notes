@@ -1,0 +1,51 @@
+Java File I/O
+
+### What is File I/O?
+- Allows us to read and write data to memory.
+- To use File I/O we need to import the java.io and java.nio packages.
+-Java io is from java in the 90's...
+
+### Java IO vs Java NIO
+- Java IO behaves synchronously:
+  - Data streams byte by byte.
+  - Thread calls are blocked until the current read() or write() operation is complete.
+  - A thread call is referring to a single line of execution in your program ... threads refer to different lines of execution that we have.  Thread is very linear
+  - Simpler to use for small scale applications
+
+- Java NIO behaves asynchronously:
+  - Data is cached in a buffer (large blocks of data). Allows for multi-threading
+  - Faster performance in large scale applications
+
+
+** We'll be using a combination of these two packages today. **
+
+### What's a Path? A File?
+- Path: refers to the location of a file in the system
+  - Absolute Path: Like the address to a house. Always the same.
+  - Relative Path: Asking for directions to a house. Depends on where you currently are.
+- File: contains the data on a storage device (ie. index.html, style.css, dog.jpg, etc.)
+  - The house itself.
+
+### Paths
+- In Java File I/O, file paths are represented as Objects.
+- The imported packages give us methods to turn a path into an Object.
+- This abstracts away the differences between file system paths (MacOS vs Windows)
+  - Remember that Java can run anywhere!
+-Absolute path think-of an address
+relative path - think getting directions from where you are currently
+
+  1. Write the absolute path to your IdeaProjects folder.
+  2. If you cd into my IdeaProjects folder, what is the relative path to codeup-web-exercises?
+  3. Using Paths.get(), check to see if your .gitignore file exists. Print the result
+
+### Files
+- Files in Java I/O are also represented as Objects.
+
+1. Check for the file 'info.txt' inside of the 'data' directory. What happens?
+2. Try it yourself.
+  - create a new directory called 'test' in the root of your project. Make sure this is only created if it doesn't already exist.
+  - inside of the 'test' directory, use the Files class to create 'hello.txt'
+
+### Reading and Writing Files
+
+[Reading Files Line by Line in Java](https://stackabuse.com/reading-a-file-line-by-line-in-java/)

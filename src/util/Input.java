@@ -142,7 +142,7 @@ public class Input {
 
     public static int convertHex(int hex){
         try{
-            return Integer.parseInt(String.valueOf(hex), 2);
+            return Integer.parseInt(String.valueOf(hex), 16);
         }catch(NumberFormatException e){
             System.out.println("Invalid input.  Enter valid integer...");
             e.printStackTrace();
@@ -152,14 +152,18 @@ public class Input {
 
     public static void main(String[] args) {
 
-//        Input in = new Input();
+        Input in = new Input();
 //
 //
-//        System.out.println("Enter an integer: ");
+        System.out.println("Enter an integer: ");
 //       String hex = in.getHex();
 //        System.out.println("Hex value is " + hex);
-//
-//
+
+//        String hex = in.getHex();
+
+//        This is an integer conversion of a hex number
+        System.out.println(convertHex(in.getInt()));
+
 //
 ////        System.out.println("Enter an integer: ");
 ////        System.out.println(getBinary(in.getInt()));

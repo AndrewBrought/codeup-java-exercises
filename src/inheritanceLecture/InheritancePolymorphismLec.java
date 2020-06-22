@@ -59,8 +59,9 @@ public class InheritancePolymorphismLec {
 
 
 //    ========== Polymorphism ========
-//     Allows for targeting shared behaviors between diff. classes by targeting classes be a common ancestor
+//     Allows for targeting shared behaviors between diff. classes by targeting classes by a common ancestor
 //    ** One thing, many forms
+
     //Overloading
     //Overriding
 
