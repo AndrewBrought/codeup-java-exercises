@@ -7,22 +7,50 @@ The following are several points of competency and skill that are intended to he
 ### Java I
 
 - [ ] I can explain how Java code runs: from being written to executing on an operation system.
+--Programmer-writes code in .java file - input compiler -- output .class file - runs on JVM - runs on - OS
+
 - [ ] I can explain the difference between a primitive type and a reference type in Java.
+primitive types are the building blocks of the language...reference types refer to objects or arrays
+
 - [ ] I can name several primitive types in Java.
+-- byte, short, int, long, float, double, char, boolean...non-primitive Types Ex: string, array
+
 - [ ] I can explain why multiple number primitive types are used.
+--there are multiple number primitive types to allow java to be precise with memory control for a given task
+
 - [ ] I can give an example of implicit and explicit casting.
+--implicit casting is handled by the compiler...explicit is done by the programmer, used when converting a double to int or a base type to a derived type
+
 - [ ] I can explain the difference between a runtime and compile-time error.
+-- Compile-time errors refer to the error corresponding to syntax or semantics, they get detected by the compiler at the time of code development...Runtime errors refer to the error encountered during execution of code at runtime, these get detected when the jvm tries to run.
+
 - [ ] I can identify the major editions of Java.
+-- Java SE (Standard Edition) - Contains core functionality of the Java language, Provides facilities for networking, security, database, access, GUI dev,and XML parsing; Java EE (Enterprise Edition) - Facilities for building large-scale enterprise-level applications; Contains the Servlet, JSP, and JDBC libraries; JavaFX GUI applications; JavaME Java on mobile devices; Android
+
 - [ ] I can define what a Java wrapper class is.
+-- Wrapper classes provide a way to use primitive data types as objects(ex: Byte, Short, Integer, Long, Float, Double, Boolean, Character)
 
 ### Java II
 
 - [ ] I can articulate what OOP is.
+--object oriented programing...a computer programming model that organizes software design around data, or objects, rather than functions and logic. An object can be defined as a data field that has unique attributes and behavior.
+
 - [ ] I can identify the four levels of visibility for a class/field/method and the identifiers used.
+-- public (seen by class, Package, subclass, world), protected (seen by class, package, subclass), package-private (class, package), private (seen by class)
+
 - [ ] I know what class of static methods is often used when working with arrays.
+-- print an array, Create an arraylist from an array, check if an array contains a certain value, remove an array,
+
 - [ ] I can explain the difference between static (class) fields/methods and instance fields/methods.
+--static variables' values are associated with the class as a whole...instance variables hold values that are associated with an individual object
+
 - [ ] I can explain the difference between method overloading and method overriding.
+-- method overloading uses the same named method with different argument lists...method overriding is done so that a child class can give its own implementation to a method which is already provided by the parent class.
+
 - [ ] I can identify the four pillars of object-oriented programming and give examples of each one.
+--Encapsulation (), inheritance (), abstraction (), polymorphism ()
+
+
 - [ ] I can describe the differences between interfaces and abstract classes and their use cases.
 - [ ] I can generally describe what the Java Collections Framework is and specifically talk about the differences between a list, set, and map.
 - [ ] I can explain the difference between a checked and unchecked exception.
@@ -36,6 +64,7 @@ The following are several points of competency and skill that are intended to he
 ### Java I
 
 - [ ] I can write a hello world Java program from scratch.
+
 - [ ] I can write Java control statements (if, if/else, switch, ternary) and loops (while, do-while, for, for-each) from memory.
 - [ ] I can write examples of the 8 Java primitive types.
 - [ ] I can write examples of explicit casting and implicit casting.
