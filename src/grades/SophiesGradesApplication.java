@@ -15,7 +15,7 @@ public class SophiesGradesApplication {
         System.out.println();
     }
     public static void viewIndividualStudent(){
-        String studentKey = input.getString("Which student would you like more info on?");
+        String studentKey = input.getString(" ");
 
         if(students.containsKey(studentKey)){
             System.out.println("Name" + students.get(studentKey).getName() + " - GitHub Username: " + studentKey);

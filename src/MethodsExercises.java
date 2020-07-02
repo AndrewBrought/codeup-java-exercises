@@ -115,7 +115,7 @@ public class MethodsExercises<response> {
             if (!answer.equals("no")) {
                 return factorial(1, 10);
             } else {
-                System.out.println("See yout later!");
+                System.out.println("See you later!");
             }
             return userInput;
         }

@@ -1,0 +1,50 @@
+================================= JUNIT
+-- Context
+  JUnit: the most popular unit testing framework for Java
+
+  Building out tests for your code is like tidying up your living space every day:
+    - it's a frusterting hassle upfront
+    - makes living and working in your home much easier over time
+    - in a perfect world, every developer would write tests for every new feature, and clean their room every day
+
+  Previously at Codeup...
+
+    Unit testing in JavaScript using Jasmine
+
+  Today...
+
+    Unit testing in Java using JUnit 4
+    (There is a Junit 5 - only works with java 8 +)
+    (JUnit 4 works with Java 5 +)
+    TDD with JUnit and IntelliJ
+    Writing tests for legacy code
+
+  Lots of different kinds of tests: unit tests, integration tests, UI tests, end-to-end, etc. tests
+
+  Unit tests are specific and typically focus on correct functionality of single methods/classes/objects
+
+  Employers want our graduates to have a strong foundation in testing!
+
+-- Set Up
+
+  1. Create new Maven project called "junit-tdd"
+  2. Link to GitHub //Skipping
+  3. Add maven compiler plugin (from curriculum) and JUnit dependency to pom.xml file
+  4. In test classes, add relevent imports
+  5. Test and code away!
+
+-- Basics of JUnit
+
+  @Test annotation and test methods
+  Assert class assertions
+  Warm up exercises and student demos
+
+-- TDD
+
+  Build CodeupCrypt with TDD
+  First part of exercise and walk through
+
+-- LEGACY CODE
+
+  Build Kitchen tests
+  Second part of exercise and walk through

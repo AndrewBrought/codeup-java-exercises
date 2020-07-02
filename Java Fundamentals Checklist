@@ -48,10 +48,12 @@ primitive types are the building blocks of the language...reference types refer 
 -- method overloading uses the same named method with different argument lists...method overriding is done so that a child class can give its own implementation to a method which is already provided by the parent class.
 
 - [ ] I can identify the four pillars of object-oriented programming and give examples of each one.
---Encapsulation (), inheritance (), abstraction (), polymorphism ()
+--Encapsulation (is a mechanism of wrapping the data (variables) and code acting on the data (methods) together as a single unit), inheritance (The process where one class acquires the properties (methods and fields) of another), abstraction (Data abstraction is the process of hiding certain details and showing only essential info to the user-can be achieved with classes or interfaces), polymorphism (The abilbity of an object to take on many forms-- most commonly occurs when a parent class reference is used to refer to a child class object)
 
 
 - [ ] I can describe the differences between interfaces and abstract classes and their use cases.
+--Methods of a Java interface are implicitly abstract and cannot have implementations...an abstract class can have instance methods that implements a default behavior...A java class can implement multiple interfaces but can extend only one abstract class.
+
 - [ ] I can generally describe what the Java Collections Framework is and specifically talk about the differences between a list, set, and map.
 - [ ] I can explain the difference between a checked and unchecked exception.
 - [ ] I can explain what a Java annotation is, why they are used, and give examples.

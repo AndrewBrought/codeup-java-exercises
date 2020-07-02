@@ -1,0 +1,50 @@
+What a database is
+
+What database Management system is
+
+How When to write JOIN clause
+
+How and When to use a sub-query
+
+RDBMS - Relational DataBase Management System
+
+Queries:
+Examples:
+who are the users named "John Smith"?
+what items were sold between thurs and fri?
+what color is the shirt with sku 1337?
+
+Production server (auto start)
+Local Development (manual start/stop)
+
+First check for database error ... is it running?
+
+**YOU are the client
+
+~mysql.server start
+~mysql.server stop
+~mysql.server status
+
+MySQL CLI
+
+Enter Password: codeup
+
+# To see the MySQL Client commands
+mysql> help; //semicolon very important
+
+#To see the MySQL Server commands
+mysql> help contents;
+
+output is organized in the command line right out of the box
+
+if table is too big add \G at the end of command to see it vertically
+
+How to quit MySQL CLI:
+exit;
+
+Wrapup:
+MySQL is a RDBMS
+Queries allow for requesting data with multiple criteria
+We'll manually start and stop our server
+
+CLI is useful for manipulating data
