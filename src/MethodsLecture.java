@@ -1,6 +1,21 @@
 public class MethodsLecture {
-//    public static void main(String[] args){
-
+    public static void main(String[] args) {
+//        int a = 4;
+//        int i = 12;
+//        double b = 4.0;
+//        double d = 4.0;
+//        System.out.printf("%.1f\n", b + d);
+//        System.out.println(a + i);
+//
+//        int intVariable = scan.nextInt();
+//        double doubleVariable = scan.nextDouble();
+//        scan.nextLine();
+//        String strVariable = scan.nextLine();
+//        System.out.println(i+intVariable);
+//        System.out.println(d+doubleVariable);
+//        System.out.println(s+strVariable);
+    }
+}
 
 //  METHODS
 //        A sequence of statements/ block code that performs certain tasks
@@ -55,10 +70,10 @@ public class MethodsLecture {
     TO DO: Write a public static method called favoriteSong that prints
     your favorite song.
  */
-    public static void favSong(String song){
-        System.out.println("My favorite song is " + song);
-        song = "time";
-    }
+//    public static void favSong(String song){
+//        System.out.println("My favorite song is " + song);
+//        song = "time";
+//    }
 
 /*
     TO DO: Write a public static method called weeksIn that prints
@@ -86,9 +101,9 @@ public class MethodsLecture {
 //    }
 
 //    version 4
-    public static void orderFood(String item1, String item2){ //This wroks because the paramets types are different
-        System.out.printf("I would like %s and %s\n", item1, item2);
-    }
+//    public static void orderFood(String item1, String item2){ //This wroks because the paramets types are different
+//        System.out.printf("I would like %s and %s\n", item1, item2);
+//    }
 
 
 
@@ -111,15 +126,15 @@ public class MethodsLecture {
 
 //    recursion is great when you don't know the endpoint...we just need to know our specifications and write code that occurs every other time
 
-    public static void count(int n){
-//         this exception-statement is the stopping condition
-        if(n <= 0){
-            System.out.println("All done!");
-            return;
-        }
-        System.out.println(n);
-        count(n - 1);
-    }
+//    public static void count(int n){
+////         this exception-statement is the stopping condition
+//        if(n <= 0){
+//            System.out.println("All done!");
+//            return;
+//        }
+//        System.out.println(n);
+//        count(n - 1);
+//    }
 
 
 //    public static void main(String[] args) {
@@ -142,20 +157,20 @@ public class MethodsLecture {
 //        return result;
 //    }
 
-
-    public static long getPower(int base, int exponent){
-        if(exponent == 0) {
-            return 1;
-        } else if(exponent == 1) {
-            return base;
-        } else if( exponent == 2) {
-            return base * base;
-        }
-        System.out.println("base:" + base);
-        System.out.println("exponent:" + exponent);
-       long count = base * getPower(base, exponent -1);
-        System.out.println("current count:" + count);
-        return count;
+//
+//    public static long getPower(int base, int exponent){
+//        if(exponent == 0) {
+//            return 1;
+//        } else if(exponent == 1) {
+//            return base;
+//        } else if( exponent == 2) {
+//            return base * base;
+//        }
+//        System.out.println("base:" + base);
+//        System.out.println("exponent:" + exponent);
+//       long count = base * getPower(base, exponent -1);
+//        System.out.println("current count:" + count);
+//        return count;
 //        return base * getPower(base, exponent -1);
 //         it's confusing because in recursion we because we're terminating the program and then starting back through it again until we get the thing we're looking for...recursion is a great way to see someone's problem solving skills
 //        There are different ways to build recursion - test out your method by seeing what's happening
@@ -163,16 +178,16 @@ public class MethodsLecture {
 //        3 * 3 * getPower(3, 3); <- 2nd return, we're tacking our returns onto eachother
 //        3 * 3 * 3 *getPower(3, 2); <- 3rd return
 //        3 * 3 * 3 * 3 * 3 <- final result (you keep going until you reach what ever you're calling in the method)
-    }
+//    }
 
 
-    public static void main(String[] args) {
-        count(5);
-//        second example
-        getPower(3, 5);
+//    public static void main(String[] args) {
+//        count(5);
+////        second example
+//        getPower(3, 5);
 //        first example
 //        getPower(2, 4);
-    }
+//    }
 
 
 
@@ -208,6 +223,5 @@ public class MethodsLecture {
 //    }
 
 
-
 //    }
-}
+//}

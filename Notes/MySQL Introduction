@@ -48,3 +48,11 @@ Queries allow for requesting data with multiple criteria
 We'll manually start and stop our server
 
 CLI is useful for manipulating data
+
+CREATE USER 'name'@'localhost' IDENTIFIED BY 'pswd';
+
+SELECT user, host FROM mysql.user;
+
+GRANT ALL ON mysql.user TO 'name'@'localhost';
+
+UPDATE user SET authentication_string=PASSWORD('pswd') WHERE user='name' AND host='localhost';
